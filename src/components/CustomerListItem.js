@@ -2,12 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const CustomerListItem = ({customer, contracts, onDeleteCustomerClick}) => (
-    <li>
-        <div>
-            this is a customer, {customer.name}
-            <button onClick={onDeleteCustomerClick}>Delete customer</button>
-        </div>
-    </li>
+    <div class="card grid-item">
+        <h5>{customer.name}</h5>
+        <button onClick={onDeleteCustomerClick}>Delete</button>
+            {contracts.map(contract => 
+                <div> {contract.name} </div>
+            )}
+    </div>
 )
 
 CustomerListItem.propTypes = {
@@ -16,7 +17,7 @@ CustomerListItem.propTypes = {
         name: PropTypes.string.isRequired,
         id: PropTypes.string.isRequired
     }).isRequired,
-    contracts: PropTypes.array
+    contracts: PropTypes.array.isRequired
 }
 
 export default CustomerListItem;

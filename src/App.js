@@ -15,10 +15,10 @@ function App() {
       <div>
         <Switch>
           <Route path="/contracts">
-            <ContractListView />;
+            <Contracts />
           </Route>
           <Route path="/customers">
-            <CustomerListView />;
+            <Customers />
           </Route>
           <Route path="/">
             <Home />
@@ -27,7 +27,7 @@ function App() {
       </div>
     </Router>
   );
-}
+};
 
 
 function Home() {
@@ -40,5 +40,24 @@ function Home() {
       </nav>
     </div>
   );
-}
+};
+
+function Contracts() {
+  return (
+    <div>
+      <h1>Contracts</h1>
+      <ContractListView />
+    </div>
+  );
+};
+
+function Customers() {
+  return (
+    <div>
+      <h1>Customers</h1>
+      <CustomerListView />
+    </div>
+  );
+};
+
 export default App;

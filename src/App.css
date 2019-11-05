@@ -33,3 +33,17 @@
 a {
   margin: 8px
 }
+
+.card {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+.grid-container {
+  display: inline-grid;
+  grid-template-columns: repeat(6, minmax(160px, auto));
+}
+
+button {
+  border-radius: 15%;
+}

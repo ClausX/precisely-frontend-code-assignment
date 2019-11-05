@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ContractListItem = ({contract}) => (
-    <li>
+    <div class="card">
+        <h4>{contract.name}</h4>
         <div>
-            this is a contract, {contract.name}
+            Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
         </div>
-    </li>
+    </div>
 )
 
 ContractListItem.propTypes = {

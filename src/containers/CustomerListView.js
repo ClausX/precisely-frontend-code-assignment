@@ -2,12 +2,9 @@ import { connect } from 'react-redux';
 import { deleteCustomer, deleteContractsOfCostumers } from '../actions';
 import CustomerList from '../components/CustomerList';
 
-const getAllCustomers = (customers) => {
-    return customers;
-}
-
 const mapStateToProps = state => ({
-    customers: getAllCustomers(state.customers)
+    customers: state.customers,
+    contracts: state.contracts
 });
 
 const mapDistpatchToProps = dispatch => ({

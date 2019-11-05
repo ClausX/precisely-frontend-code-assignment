@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import ContractListItem from './ContractListItem';
 
 const ContractList = ({ contracts }) => (
-    <ul>
+    <div class="grid-container">
         {contracts.map(contract => 
             <ContractListItem 
                 key={contract.id} 
                 contract={contract}
                 />
         )}
-    </ul>
+    </div>
 );
 
 ContractList.propTypes = {
