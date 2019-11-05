@@ -1,7 +1,11 @@
-const customers = (state = [], action) => {
+import initialCustomers from '../sampleData/customers.json';
+
+const customers = (state = initialCustomers, action) => {
     switch (action.type) {
       case 'DELETE_CUSTOMER':
-        return state;
+        let newState = state.slice();
+        newState = newState.filter((c) => { return c.id !== action.customerId});
+        return newState;
       default:
         return state;
     }

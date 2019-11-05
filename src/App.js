@@ -1,15 +1,11 @@
 import React from 'react';
 import './App.css';
-import CustomerListItem from './components/CustomerListItem';
-import CustomerList from './components/CustomerList';
-import sampleCustomers from './sampleData/customers.json'
+import CustomerListView from './containers/CustomerListView';
 
 function App() {
   return (
     <div className="App">
-      <CustomerListItem 
-        name="Hej"/>
-      <CustomerList customers={sampleCustomers}/>
+      <CustomerListView/>
     </div>
   );
 }

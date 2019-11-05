@@ -2,11 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CustomerListItem from './CustomerListItem';
 
-const CustomerList = ({ customers }) => (
+const CustomerList = ({ customers, onDeleteCustomerClick }) => (
     <ul>
-        {customers.map(customer => (
-            <CustomerListItem key={customer.id} name={customer.name} onClick={() => alert("listaliastliast")}></CustomerListItem>
-        ))}
+        {customers.map(customer => 
+            <CustomerListItem 
+                key={customer.id} 
+                customer={customer} 
+                onDeleteCustomerClick={() => onDeleteCustomerClick(customer.id)}
+                />
+        )}
     </ul>
 );
 

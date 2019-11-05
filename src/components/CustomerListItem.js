@@ -1,17 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CustomerListItem = ({ onClick, name, contracts}) => (
-    <li 
-        onClick={onClick}>
-        this is a customer, {name}
+const CustomerListItem = ({customer, contracts, onDeleteCustomerClick}) => (
+    <li>
+        <div>
+            this is a customer, {customer.name}
+            <button onClick={onDeleteCustomerClick}>Delete customer</button>
+        </div>
     </li>
 )
 
 CustomerListItem.propTypes = {
-    onClick: PropTypes.func,
-    name: PropTypes.string.isRequired,
-    contracts: PropTypes.array,
+    onDeleteCustomerClick: PropTypes.func.isRequired,
+    customer: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        id: PropTypes.string.isRequired
+    }).isRequired,
+    contracts: PropTypes.array
 }
 
 export default CustomerListItem;
