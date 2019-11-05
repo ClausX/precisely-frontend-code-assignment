@@ -1,0 +1,9 @@
+[
+    { "id": "contract001", "name": "Contract #1", "customerId": "001" },
+    { "id": "contract002", "name": "Contract #2", "customerId": "001" },
+    { "id": "contract003", "name": "Contract #3", "customerId": "001" },
+    { "id": "contract004", "name": "Contract #4", "customerId": "001" },
+    { "id": "contract005", "name": "Contract #5", "customerId": "002" },
+    { "id": "contract006", "name": "Contract #6", "customerId": "003" },
+    { "id": "contract007", "name": "Contract #7", "customerId": "004" }
+]

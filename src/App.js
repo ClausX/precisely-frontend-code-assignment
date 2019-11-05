@@ -1,24 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import CustomerListItem from './components/CustomerListItem';
+import CustomerList from './components/CustomerList';
+import sampleCustomers from './sampleData/customers.json'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CustomerListItem 
+        name="Hej"/>
+      <CustomerList customers={sampleCustomers}/>
     </div>
   );
 }
